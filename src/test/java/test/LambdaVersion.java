@@ -29,10 +29,10 @@ public class LambdaVersion {
         step("Переходим в репозиторий" + REPOSITORY, () -> {
             $(linkText(REPOSITORY)).click();
         });
-        step("Открываем Issures", () -> {
+        step("Открываем Issues", () -> {
             $(partialLinkText("Issues")).click();
         });
-        step("Находим Issures с номером" + NUMBER, () -> {
+        step("Находим Issues с номером" + NUMBER, () -> {
             $(withText("#" + NUMBER)).should(Condition.visible);
         });
 
