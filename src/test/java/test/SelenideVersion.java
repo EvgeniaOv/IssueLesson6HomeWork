@@ -14,8 +14,6 @@ import static org.openqa.selenium.By.partialLinkText;
 public class SelenideVersion {
     @Test
     public void testWithListener() {
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
         open("https://github.com");
 
         $(".header-search-input").click();
