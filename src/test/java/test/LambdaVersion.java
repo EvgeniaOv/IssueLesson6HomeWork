@@ -7,16 +7,16 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
-import static javax.swing.text.html.parser.DTDConstants.NUMBER;
 import static org.openqa.selenium.By.linkText;
 import static org.openqa.selenium.By.partialLinkText;
 
 public class LambdaVersion {
+    //переменные
     private static final String REPOSITORY = "eroshenkoam/allure-example";
     private static final int NUMBER = 68;
 
     @Test
-    public void testIssueSearchLambda() {
+    public void testWithLambda() {
 
         step("Открываем главную страницу", () -> {
             open("https://github.com");
@@ -37,5 +37,18 @@ public class LambdaVersion {
         });
 
     }
+
+    @Test
+    public void annotatedStepsTest() {
+        WebSteps steps = new WebSteps();
+        steps.openMainPage();
+        steps.searchForRepository(REPOSITORY);
+        steps.openRepositoryPage(REPOSITORY);
+        steps.openIssuesTab();
+        steps.shouldSeeIssueWithNumber(NUMBER);
+
+    }
 }
+
+
 
