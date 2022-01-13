@@ -47,22 +47,4 @@ public class AnatationStepsVersion {
         public byte[] attachPageSource() {
             return WebDriverRunner.source().getBytes(StandardCharsets.UTF_8);
         }
-
-
-        @Test
-        @Owner("eovechkina")
-        @Feature("Issues")
-        @Story("Поиск Issues не авторизованым пользователем")
-        @DisplayName("Поиск Issues не авторизованым пользователем")
-        @Severity(SeverityLevel.NORMAL)
-        public void anatatedStepTest(){
-            AnatationStepsVersion anatationSteps = new AnatationStepsVersion();
-            anatationSteps.openMainPage();
-            anatationSteps.searchForRepository("eroshenkoam/allure-example");
-            anatationSteps.openRepositoryPage("eroshenkoam/allure-example");
-            anatationSteps.openIssuesTab();
-            anatationSteps.shouldSeeIssueWithNumber(68);
-        }
-
-
     }
