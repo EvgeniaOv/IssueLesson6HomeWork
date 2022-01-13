@@ -18,7 +18,7 @@ public class LambdaVersion {
     @Test
     public void testIssueSearchLambda() {
 
-        step("Открываем гласную страницу", () -> {
+        step("Открываем главную страницу", () -> {
             open("https://github.com");
         });
         step("Поиск репозитория" + REPOSITORY, () -> {
