@@ -10,7 +10,7 @@ import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
 import static org.openqa.selenium.By.partialLinkText;
 
-public class LambdaVersion {
+public class LambdaVersionTest {
     //переменные
     private static final String REPOSITORY = "eroshenkoam/allure-example";
     private static final int NUMBER = 68;
@@ -40,7 +40,7 @@ public class LambdaVersion {
 
     @Test
     public void annotatedStepsTest() {
-        WebSteps steps = new WebSteps();
+        WebStepsTest steps = new WebStepsTest();
         steps.openMainPage();
         steps.searchForRepository(REPOSITORY);
         steps.openRepositoryPage(REPOSITORY);

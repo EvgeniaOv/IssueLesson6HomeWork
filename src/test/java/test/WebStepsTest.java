@@ -2,7 +2,6 @@ package test;
 
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
-import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
@@ -10,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.linkText;
 import static org.openqa.selenium.By.partialLinkText;
 
-public class WebSteps {
+public class WebStepsTest {
 
     @Step("Открываем главную страницу")
     public void openMainPage() {
